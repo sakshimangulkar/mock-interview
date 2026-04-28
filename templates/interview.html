@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <h2>Mock Interview</h2>
+</div>
+
+<div class="container">
+
+  <div class="question-box">
+    <h3>Question 1</h3>
+    <p>What is Python and why is it used?</p>
+
+    <textarea placeholder="Type your answer here..."></textarea>
+
+    <button class="next-btn">Next Question</button>
+  </div>
+  <p id="timer">Time left: 60s</p>
+
+<script>
+let time = 60;
+setInterval(() => {
+  time--;
+  document.getElementById("timer").innerText = "Time left: " + time;
+  if(time == 0) document.forms[0].submit();
+}, 1000);
+</script>
+
+</div>
+
+</body>
+</html>
