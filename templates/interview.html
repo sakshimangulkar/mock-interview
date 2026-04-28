@@ -2,19 +2,24 @@
 <html>
 <head>
     <title>Interview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>{{ category.upper() }} Interview</h2>
+<div class="container">
+    <h2>{{ category.upper() }} Interview</h2>
 
-<form method="POST">
-    {% for q in questions %}
-        <p>{{ loop.index }}. {{ q.q }}</p>
-        <input type="text" name="answers" required><br><br>
-    {% endfor %}
+    <form method="POST">
+        {% for q in questions %}
+            <div class="question-box">
+                <p>{{ loop.index }}. {{ q.q }}</p>
+                <input type="text" name="answers" required>
+            </div>
+        {% endfor %}
 
-    <button type="submit">Submit</button>
-</form>
+        <button type="submit">Submit</button>
+    </form>
+</div>
 
 </body>
 </html>

@@ -2,15 +2,17 @@
 <html>
 <head>
     <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>Result</h2>
+<div class="container">
+    <h2>Interview Result</h2>
+    <p>Category: {{ category }}</p>
+    <p>Your Score: {{ score }} / {{ total }}</p>
 
-<p>Category: {{ category }}</p>
-<p>Your Score: {{ score }} / {{ total }}</p>
-
-<a href="/">Go Home</a>
+    <a href="/">Go Home</a>
+</div>
 
 </body>
 </html>
