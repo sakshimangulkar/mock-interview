@@ -11,10 +11,10 @@
 
     <form method="POST">
         {% for q in questions %}
-            <div class="question-box">
-                <p>{{ loop.index }}. {{ q.q }}</p>
-                <input type="text" name="answers" required>
-            </div>
+        <div class="question-box">
+            <p>{{ loop.index }}. {{ q.q }}</p>
+            <input type="text" name="answers" placeholder="Type your answer..." required>
+        </div>
         {% endfor %}
 
         <button type="submit">Submit</button>

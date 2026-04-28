@@ -6,12 +6,21 @@
 </head>
 <body>
 
-<div class="container">
-    <h2>Interview Result</h2>
-    <p>Category: {{ category }}</p>
-    <p>Your Score: {{ score }} / {{ total }}</p>
+<div class="result-box">
+    <h1>🎯 Your Score</h1>
+    <h2>{{ score }} / {{ total }}</h2>
 
-    <a href="/">Go Home</a>
+    <p>
+        {% if score == total %}
+            Excellent 🔥
+        {% elif score > 0 %}
+            Good attempt 👍
+        {% else %}
+            Needs improvement 💪
+        {% endif %}
+    </p>
+
+    <a href="/" class="btn">Go Home</a>
 </div>
 
 </body>
